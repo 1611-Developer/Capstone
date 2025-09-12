@@ -1,2 +1,22 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% content_for :title, "#{base_title}" %> 
+
+<div class="centered-page landing-page">
+  <h1>A clean, professional, and minimal <br> platform
+      to demo your projects.</h1>
+  <br>
+  <h2>
+    Share your profile link with employers or clients. 
+    Browse apps made by other developers.
+  </h2>
+   
+  <br>
+  <h3>Secure your Username. <u>Join Now</u></h3>
+  <br>
+  <form>
+    <div class="input-group">
+      <input type="email" class="email-input"
+        placeholder="Enter your email" required>
+      <button type="submit" class="login-signup-btn signup-btn-color signup-btn-bottom">Register</button>
+    </div>
+  </form>
+</div>

@@ -8,3 +8,277 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a global font for the entire app */
+body {
+  /*font-family: 'Arial', sans-serif; /* Default font */
+  font-size: 20px; /* Adjust base font size if needed */
+  line-height: 1.5; /* Improve readability */
+  color: white; /* Set a default text color */
+  background-color: #6CB4EE;
+  /* Uncomment any of the following font-family options to test: */
+
+  /* font-family: 'Verdana', sans-serif; */ /* Clean and modern sans-serif */
+  /*  font-family: 'Georgia', serif; */ /* Classic serif font */
+  /* font-family: 'Tahoma', sans-serif; */ /* Compact sans-serif */
+  /* font-family: 'Times New Roman', serif; */ /* Traditional serif font */
+  /* font-family: 'Roboto', sans-serif; */ /* Modern sans-serif (Google Font) */
+  /* font-family: 'Lato', sans-serif; */ /* Professional sans-serif (Google Font) */
+  /* font-family: 'Montserrat', sans-serif; */ /* Geometric sans-serif (Google Font) */
+  /* font-family: 'Merriweather', serif; */ /* Readable serif (Google Font) */
+  /* font-family: 'Open Sans', sans-serif; */ /* Versatile sans-serif (Google Font) */
+  /* font-family: 'Courier New', monospace; */ /* Monospaced font for code-like appearance */
+
+  /* Sans-Serif Fonts (Modern, clean) */
+  /* font-family: 'Arial', sans-serif; */
+  /* font-family: 'Helvetica', sans-serif; */
+  /* font-family: 'Verdana', sans-serif; */
+  /* font-family: 'Trebuchet MS', sans-serif; */
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif; */
+  /* font-family: 'Tahoma', Geneva, sans-serif; */
+   font-family: 'Segoe UI', Tahoma, Geneva, sans-serif; */
+  /* font-family: 'Open Sans', sans-serif; */
+  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: 'Lato', sans-serif; */
+}
+
+/* Centering content for both home and help pages */
+.centered-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 80vh; /* Full viewport height */
+  text-align: center; /* Center text inside the container */
+  min-height: 100vh;
+}
+
+.landing-page {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.centered-page h1 {
+  font-size: 50px;
+}
+
+.centered-page h2 {
+  font-size: 30px;
+  font-weight: 200;
+}
+
+.centered-page a {
+  color: #0366d6; /* Link color */
+  text-decoration: none;
+}
+
+.centered-page a:hover {
+  text-decoration: underline;
+}
+
+.centered-page button {
+  font-size: 20px;
+}
+
+.centered-page input {
+font-size: 20px;
+}
+
+
+/* Header Styles */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  color: #fff;
+  height: 65px; /* Explicitly set a shorter height */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  z-index: 1000;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  justify-content: space-between; /* Space between logo and nav */
+  align-items: center; /* Align vertically */
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Logo Styling */
+#logo {
+  padding-top: 20px;
+  font-size: 2.5rem; /* Increase font size */
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  text-decoration: none; /* Remove underline from the link */
+  font-style: normal;
+  font-family: "Sriracha", cursive;
+}
+
+#logo:hover {
+  color: #000; /* Optional: Add a hover effect */
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding-top: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px; /* Maintain enough space for clicks */
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}
+
+.nav-signup {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.nav-login {
+  border-radius: 5px;
+}
+
+/* Hamburger Menu (Hidden by default) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+}
+
+/* Responsive Styles */
+  @media (max-width: 768px) {
+    /* By default, the navigation bar is hidden on smaller screens */
+    nav {
+      display: none; /* Hide navigation links by default */
+      flex-direction: column;
+      background: #000;;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 10px;
+    }
+
+    .hamburger {
+      display: flex; /* Show hamburger menu on small screens */
+    }
+
+    /* When the 'active' class is added, the nav becomes visible */
+    nav.active {
+      display: flex; /* Show navigation when active */
+    }
+}
+
+/* Main Content Styles */
+  .container-content {
+  margin-top: 60px; /* To avoid overlap with fixed navbar */
+}
+
+.login-signup-btn {
+  cursor: pointer; /* Pointer cursor on hover */
+  border: 1px solid white; /* White border */
+  border-radius: 5px; /* Optional: Rounded corners */
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline */
+  transition: all 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+  padding-bottom: 1px;
+}
+
+.login-signup-btn:hover {
+    background-color: white; /* White background on hover */
+    color: black; /* Black text on hover */
+}
+
+.signup-btn-color {
+  background-color: #4CAF50; !important;/* Green color */
+}
+
+
+.container {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0 2rem;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 1rem;
+}
+
+.email-input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 3px solid black;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    width: 300px;
+}
+
+.signup-btn-bottom {
+    padding: 0.84rem 1.5rem;
+    border: 3px solid black;
+}
+
+.form-container {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
