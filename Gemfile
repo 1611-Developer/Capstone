@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source "https://rubygems.org"                                                                                     
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.2", ">= 8.0.2.1"
@@ -54,6 +54,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem "rails_live_reload"
 end
 
 group :test do
