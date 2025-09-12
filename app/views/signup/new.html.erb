@@ -1,2 +1,41 @@
-<h1>Signup#new</h1>
-<p>Find me in app/views/signup/new.html.erb</p>
+<%= tag.div(flash[:alert], class: "alert-message") if flash[:alert] %>
+<%= tag.div(flash[:notice], class: "notice-message") if flash[:notice] %>
+
+<div class="centered-page">
+  <%= form_with model: @user, url: signup_path, html: { class: "form-container" }, local: true do |form| %>
+    <h2 class="form-title">Register for Created.Software</h2>
+    <div class="input-group">
+      <label for="first_name" class="label">First Name:</label>
+      <%= form.text_field :first_name, required: true, autofocus: true, placeholder: "Jane", class: "email-input" %>
+    </div>
+    <div class="input-group">
+      <label for="last_name" class="label">Last Name:</label>
+      <%= form.text_field :last_name, required: true, placeholder: "Doe", class: "email-input" %>
+    </div>
+    <div class="input-group">
+      <label for="username" class="label">Username:</label>
+      <%= form.text_field :username, required: true, placeholder: "janedoe123", class: "email-input" %>
+    </div>
+    <div class="input-group">
+      <label for="email_address" class="label">Email Address:</label>
+      <%= form.email_field :email_address, required: true, autocomplete: "username", placeholder: "jane@example.com", class: "email-input" %>
+    </div>
+    <div class="input-group">
+      <label for="password" class="label">Password:</label>
+      <%= form.password_field :password, required: true, autocomplete: "new-password", placeholder: "your super secret password", maxlength: 72, class: "password-input" %>
+    </div>
+    <div class="input-group">
+      <label for="password_confirmation" class="label">Confirm Password:</label>
+      <%= form.password_field :password_confirmation, required: true, autocomplete: "new-password", placeholder: "Repeat your password", maxlength: 72, class: "password-input" %>
+    </div>
+    <div class="input-group">
+      <label for="avatar" class="label">Avatar (optional):</label>
+      <%= form.file_field :avatar, class: "email-input" %>
+    </div>
+    <div class="input-group">
+      <%= form.submit "Signup", class: "login-signup-btn signup-btn-color signup-btn-bottom" %>
+    </div>
+    <%= link_to "Already have an account? Login", login_path, class: "forgot-password-link" %>
+  <% end %>
+</div>
+
