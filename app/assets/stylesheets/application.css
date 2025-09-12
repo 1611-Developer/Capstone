@@ -49,15 +49,118 @@ body {
   /* font-family: 'Lato', sans-serif; */
 }
 
-/* Centering content for both home and help pages */
+/* Centering the entire page */
 .centered-page {
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center vertically */
   align-items: center; /* Center horizontally */
-  height: 80vh; /* Full viewport height */
-  text-align: center; /* Center text inside the container */
   min-height: 100vh;
+  text-align: center;
+  background-color: #6CB4EE; /* Matches your existing background */
+}
+
+/* Form container styling */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Ensures the form stays responsive */
+  margin: 0 auto;
+}
+
+
+/* Input group styling */
+.input-group {
+  width: 100%; /* Ensures inputs span properly */
+  margin-bottom: 20px; /* Spacing between fields */
+  text-align: left; /* Align labels to the left */
+}
+
+/* Label styling */
+.label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Input fields styling */
+.email-input,
+.password-input {
+  width: 100%; /* Make inputs take up the maximum width of their container */
+  padding: 12px; /* Add padding for better spacing inside the input */
+  font-size: 16px; /* Font size for readability */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 6px; /* Rounded corners */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+/* Button styling */
+.login-signup-btn {
+  width: 100%; /* Full width button */
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  background-color: #4CAF50; /* Green color */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-signup-btn:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Link styling */
+.forgot-password-link {
+  color: #0366d6;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+/* Flash messages styling */
+.alert-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.notice-message {
+  color: green;
+  margin-bottom: 10px;
+}
+
+/* Input fields styling */
+.email-input {
+  width: 100%; /* Full width of the container */
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Input fields styling */
+.email-input,
+.password-input {
+  width: 100%; /* Make inputs take up the maximum width of their container */
+  padding: 12px; /* Add padding for better spacing inside the input */
+  font-size: 16px; /* Font size for readability */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 6px; /* Rounded corners */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
 }
 
 .landing-page {
@@ -219,13 +322,15 @@ nav ul li a:hover {
 }
 
 .login-signup-btn {
-  cursor: pointer; /* Pointer cursor on hover */
-  border: 1px solid white; /* White border */
-  border-radius: 5px; /* Optional: Rounded corners */
-  color: white; /* Text color */
-  text-decoration: none; /* Remove underline */
-  transition: all 0.3s ease, color 0.3s ease; /* Smooth hover effect */
-  padding-bottom: 1px;
+  width: 100%; /* Full width button */
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  background-color: #4CAF50;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .login-signup-btn:hover {
@@ -237,29 +342,23 @@ nav ul li a:hover {
   background-color: #4CAF50; !important;/* Green color */
 }
 
+/* Link styling */
+.forgot-password-link {
+  color: #0366d6;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
 
 .container {
     display: flex;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
     padding: 0 2rem;
-}
-
-.input-group {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0 1rem;
-}
-
-.email-input {
-    flex: 1;
-    padding: 0.75rem;
-    border: 3px solid black;
-    border-radius: 6px;
-    box-sizing: border-box;
-    font-size: 1rem;
-    width: 300px;
 }
 
 .signup-btn-bottom {
