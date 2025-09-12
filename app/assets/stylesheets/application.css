@@ -234,7 +234,7 @@ header {
 }
 
 #logo:hover {
-  color: #000; /* Optional: Add a hover effect */
+  color: #4CAF50; /* Optional: Add a hover effect */
 }
 
 
@@ -332,11 +332,14 @@ nav ul li a:hover {
   background-color: #4CAF50;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  text-decoration: none; /* Remove underline */
+  color: white; /* Ensure text color matches your button style */
 }
 
 .login-signup-btn:hover {
-    background-color: white; /* White background on hover */
-    color: black; /* Black text on hover */
+  text-decoration: none; /* Remove underline */
+  background-color: white; /* White background on hover */
+  color: black; /* Black text on hover */
 }
 
 .signup-btn-color {
@@ -363,8 +366,8 @@ nav ul li a:hover {
 }
 
 .signup-btn-bottom {
-    padding: 0.84rem 1.5rem;
-    border: 3px solid black;
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
 }
 
 .form-container {
@@ -382,3 +385,28 @@ nav ul li a:hover {
     margin-bottom: 1.5rem;
     color: #333;
 }
+
+
+
+
+
+/* To enforce your button styling, add these rules at the END of your application.css file (so they are not overridden) */
+
+/* Force "button" links to lose undeline and unwanted colors on hover and focus */
+.login-signup-btn,
+.login-signup-btn:visited,
+.login-signup-btn:hover,
+.login-signup-btn:active,
+.login-signup-btn:focus {
+  text-decoration: none !important; /* Never underlined */
+  color: white !important;
+  background-color: #4CAF50 !important; /* Green, or your preferred color */
+}
+
+/* Change button look for hover, optional: */
+.login-signup-btn.signup-btn-bottom:hover,
+.login-signup-btn.signup-btn-bottom:focus {
+  background-color: white !important; /* Darker green, match your :hover design */
+  color: #6CB4EE !important;
+}
+

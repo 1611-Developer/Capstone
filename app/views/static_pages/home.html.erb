@@ -14,9 +14,7 @@
   <br>
   <form>
     <div class="input-group">
-      <input type="email" class="email-input"
-        placeholder="Enter your email" required>
-      <button type="submit" class="login-signup-btn signup-btn-color signup-btn-bottom">Register</button>
+      <%= link_to "Register", signup_path, method: :get,  class: "login-signup-btn signup-btn-color signup-btn-bottom" %>
     </div>
   </form>
 </div>
