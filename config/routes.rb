@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "signup/new"
+  get "signup/create"
   get "users/new"
   resource :session
   resources :passwords, param: :token
