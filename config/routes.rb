@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get "dashboard/show"
   # Signup routes
   get  "/signup", to: "signup#new"
   post "/signup", to: "signup#create"
@@ -17,6 +16,9 @@ Rails.application.routes.draw do
 
   # Logged routes
   get "/dashboard", to: "dashboard#show", as: :dashboard
+
+  # Resources gives you standard routes for all CRUD actions.
+  resources :projects
 
   # Passwords resource
   resources :passwords, param: :token
