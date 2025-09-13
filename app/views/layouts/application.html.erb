@@ -23,7 +23,12 @@
 <body>
   <header>
     <div class="container">
-      <%= link_to "Created.Software", root_path, id: "logo" %>
+      <% if current_user %>
+        <span id="logo" class="non-link">Created.Software</span>
+      <% else %>
+        <%= link_to "Created.Software", root_path, id: "logo" %>
+      <% end %>
+
       <!-- Hamburger Menu -->
       <div class="hamburger" id="hamburger">
         <span></span>
@@ -40,9 +45,9 @@
       </li>
 
     <% else %>
-      <li><%= link_to "Login", login_path %></li>
+      <li><%= link_to "Login", login_path, class: "nav-login" %></li>
       <% unless current_page?(root_path) %>
-        <li><%= link_to "Signup", signup_path %></li>
+        <li><%= link_to "Signup", signup_path, class: "nav-signup" %></li>
       <% end %>
     <% end %>
   </ul>

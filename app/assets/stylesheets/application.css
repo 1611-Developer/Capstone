@@ -231,12 +231,18 @@ header {
   text-decoration: none; /* Remove underline from the link */
   font-style: normal;
   font-family: "Sriracha", cursive;
+  cursor: pointer;
 }
 
 #logo:hover {
   color: #4CAF50; /* Optional: Add a hover effect */
 }
 
+#logo.non-link {
+  cursor: default;
+  color: inherit;        /* or set to your default text color */
+  text-decoration: none; /* remove underline on hover */
+}
 
 nav ul {
   list-style: none;
@@ -261,11 +267,13 @@ nav ul li a:hover {
 
 .nav-signup {
   background-color: #4CAF50;
-  color: white;
+  border-radius: 5px;
+  border: solid 1px white;
 }
 
 .nav-login {
   border-radius: 5px;
+  border: solid 1px white;
 }
 
 /* Hamburger Menu (Hidden by default) */
