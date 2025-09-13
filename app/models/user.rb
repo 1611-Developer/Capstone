@@ -4,8 +4,8 @@ class User < ApplicationRecord
 
   normalizes :email_address, with: ->(e) { e.strip.downcase }
 
-  validates :email, presence: true
-  validates :firstname, presence: true
-  validates :lastname, presence: true
+  validates :email_address, presence: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
   validates :username, presence: true
 end
