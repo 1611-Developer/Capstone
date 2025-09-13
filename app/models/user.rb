@@ -8,4 +8,9 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :username, presence: true, uniqueness: true
+
+  def self.authenticate_by(params)
+    user = find_by(email_address: params[:email_address])
+    user if user&.authenticate(params[:password])
+  end
 end
