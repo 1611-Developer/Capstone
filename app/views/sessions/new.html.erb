@@ -1,7 +1,19 @@
-<%= tag.div(flash[:alert], class: "alert-message") if flash[:alert] %>
-<%= tag.div(flash[:notice], class: "notice-message") if flash[:notice] %>
-
 <div class="centered-page">
+
+  <% if flash[:alert] %>
+    <div class="alert alert-error">
+      <div class="content"><%= flash[:alert] %></div>
+      <button type="button" class="close-btn" onclick="this.closest('.alert').style.display='none'">×</button>
+    </div>
+  <% end %>
+  
+  <% if flash[:notice] %>
+    <div class="alert alert-success">
+      <div class="content"><%= flash[:notice] %></div>
+      <button type="button" class="close-btn" onclick="this.closest('.alert').style.display='none'">×</button>
+    </div>
+  <% end %>
+
   <%= form_with url: sessions_path, html: { class: "form-container" } do |form| %>
     <h2 class="form-title">Login to Created.Software</h2>
     <div class="input-group">

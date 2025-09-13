@@ -1,21 +1,21 @@
-<% if @user.errors.any? %>
-  <div class="alert alert-error">
-    <div class="content">
-      <strong>There were some errors:</strong>
-      <ul>
-        <% @user.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-    <button type="button" class="close-btn" onclick="this.parentElement.style.display='none'">×</button>
-  </div>
-<% end %>
-
-<%= tag.div(flash[:alert], class: "alert-message") if flash[:alert] %>
-<%= tag.div(flash[:notice], class: "notice-message") if flash[:notice] %>
-
 <div class="centered-page">
+  
+  <% if @user.errors.any? %>
+    <div class="alert alert-error">
+      <div class="content">
+        <strong>There were some errors:</strong>
+        <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+      <button type="button" class="close-btn" onclick="this.parentElement.style.display='none'">×</button>
+    </div>
+  <% end %>
+  <%= tag.div(flash[:alert], class: "alert-message") if flash[:alert] %>
+  <%= tag.div(flash[:notice], class: "notice-message") if flash[:notice] %>
+  
   <%= form_with model: @user, url: signup_path, html: { class: "form-container" }, local: true do |form| %>
     <h2 class="form-title">Register for Created.Software</h2>
     <div class="input-group">
