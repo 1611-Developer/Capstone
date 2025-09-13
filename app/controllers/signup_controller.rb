@@ -15,10 +15,14 @@ class SignupController < ApplicationController
     end
   end
 
+  rescue ActiveRecord::RecordNotUnique
+    @user.errors.add(:base, "Email address or username has already been taken.")
+    render :new, status: :unprocessable_entity
+  end
+
   private
 
   def user_params
     params.require(:user).permit(:email_address, :password, :password_confirmation, :first_name, :last_name, :username, :avatar)
   end
-end
 
