@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
   def require_login
-    redirect_to new_session_path unless current_user
+    redirect_to login_path unless current_user
   end
 
   # A helper method that returns the base title.

@@ -20,6 +20,5 @@ Rails.application.routes.draw do
 
   # Passwords resource
   resources :passwords, param: :token
-  resources :sessions, only: [:new, :create, :destroy]
 end
 
