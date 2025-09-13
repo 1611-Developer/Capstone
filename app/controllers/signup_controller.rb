@@ -8,13 +8,18 @@ class SignupController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      session[:user_id] = @user.id
-      redirect_to root_path, notice: "Account created!"
+    # Create a new Session record for the user, as expected by your Authentication module
+      session_record = Session.create!(
+        user: @user,
+        ip_address: request.remote_ip,
+        user_agent: request.user_agent
+      )
+      cookies.signed[:session_id] = session_record.id  # <-- This is the key step!
+      redirect_to dashboard_path, notice: "Account created!"
     else
       render :new, status: :unprocessable_entity
     end
   end
-
   rescue ActiveRecord::RecordNotUnique
     @user.errors.add(:base, "Email address or username has already been taken.")
     render :new, status: :unprocessable_entity

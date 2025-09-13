@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "dashboard/show"
   # Signup routes
   get  "/signup", to: "signup#new"
   post "/signup", to: "signup#create"
@@ -13,6 +14,9 @@ Rails.application.routes.draw do
   get    "/about",   to: "static_pages#about"
   get    "/help",    to: "static_pages#help"
   get    "/contact", to: "static_pages#contact"
+
+  # Logged routes
+  get "/dashboard", to: "dashboard#show", as: :dashboard
 
   # Passwords resource
   resources :passwords, param: :token
