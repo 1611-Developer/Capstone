@@ -457,6 +457,17 @@ nav ul li a:hover {
   background-color: #4CAF50 !important; /* Green, or your preferred color */
 }
 
+.input-group {
+  text-align: center !important;
+}
+
+.login-signup-btn.signup-btn-bottom {
+  width: auto !important;
+  max-width: 350px;
+  display: inline-block !important;
+  margin: 1.5rem auto !important;
+}
+
 /* Change button look for hover, optional: */
 .login-signup-btn.signup-btn-bottom:hover,
 .login-signup-btn.signup-btn-bottom:focus {
