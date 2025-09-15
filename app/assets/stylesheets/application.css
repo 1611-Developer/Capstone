@@ -191,6 +191,10 @@ background-color: white;
 font-size: 20px;
 }
 
+.project-name-input,
+.project-description-input {
+  text-align: center;
+}
 
 /* Header Styles */
 header {
@@ -350,6 +354,10 @@ nav ul li a:hover {
   background-color: #4CAF50; !important;/* Green color */
 }
 
+.cancel-btn-color {
+  background-color: #E65156;;
+}
+
 /* Link styling */
 .forgot-password-link {
   color: #0366d6;
@@ -450,7 +458,6 @@ nav ul li a:hover {
 .login-signup-btn:focus {
   text-decoration: none !important; /* Never underlined */
   color: white !important;
-  background-color: #4CAF50 !important; /* Green, or your preferred color */
 }
 
 .input-group {
@@ -458,10 +465,12 @@ nav ul li a:hover {
 }
 
 .login-signup-btn.signup-btn-bottom {
-  width: auto !important;
-  max-width: 350px;
-  display: inline-block !important;
-  margin: 1.5rem auto !important;
+width: 100% !important;
+  max-width: none;
+  display: block !important;
+  margin: 1.5rem 0 !important;
+  padding: 1rem 0 !important;
+  font-size: 1.5rem;
 }
 
 /* Change button look for hover, optional: */

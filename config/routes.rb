@@ -18,7 +18,11 @@ Rails.application.routes.draw do
   get "/dashboard", to: "dashboard#show", as: :dashboard
 
   # Resources gives you standard routes for all CRUD actions.
-  resources :projects
+  resources :projects do
+    member do
+      get 'confirm_delete'
+    end
+  end
 
   # Passwords resource
   resources :passwords, param: :token

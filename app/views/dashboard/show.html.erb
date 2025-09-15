@@ -1,8 +1,7 @@
 <div class="centered-page">
   <h2>Dashboard</h2>
-  <%= render "projects/form", project: @project %>
-<% @projects.each do |project| %>
-  <%= render "projects/project_card", project: project %>
-<% end %>
-
+    <%= render "projects/form", project: @project %>
+    <% @projects.each do |project| %>
+    <%= render "projects/project_card", project: project %>
+  <% end %>
 </div>

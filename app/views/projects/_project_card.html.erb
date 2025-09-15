@@ -1,11 +1,13 @@
 
 <div class="project-card">
-  <div class="input-group">                                                                                           <label for="Project Name" class="label">Project Name:</label>
+  <div class="input-group">
+    <label for="Project Name" class="label">Project Name:</label>
     <h3><%= project.name %></h3>
   </div>
   <hr>
   <br>
-  <div class="input-group">                                                                                           <label for="Project Description" class="label">Project Description:</label>
+  <div class="input-group">
+    <label for="Project Description" class="label">Project Description:</label>
     <p><%= project.description %></p>
   </div
   >
@@ -18,6 +20,7 @@
     <br>
     <%= link_to "Edit", edit_project_path(project), class: "project-action-link" %>
     |
-    <%= link_to "Delete", project_path(project), method: :delete, data: { confirm: "Are you sure?" }, class: "project-action-link" %>
+<%= link_to "Delete", confirm_delete_project_path(project), method: :delete, data: { confirm: "Are you sure?" } %>
+
 </div>
 
