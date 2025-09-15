@@ -51,29 +51,25 @@ body {
 
 /* Centering the entire page */
 .centered-page {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   justify-content: center; /* Center vertically */
   align-items: center; /* Center horizontally */
   min-height: 100vh;
   text-align: center;
   background-color: #6CB4EE; /* Matches your existing background */
-  padding-bottom: 50px;
+  padding-top: 100px;
 }
 
-/* Form container styling */
-.form-container {
-  / * display: flex; */
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
+.form-container, .project-card {
+background-color: white;
   padding: 2.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 400px; /* Ensures the form stays responsive */
-  margin: 0 auto;
+  max-width: 600px;
+  margin: 2rem auto;
+  color: black;
 }
 
 
@@ -165,8 +161,8 @@ body {
 }
 
 .landing-page {
-    margin: 0 !important;
-    padding: 0 !important;
+  margin: 0 !important;
+  padding-top: 200px; 
 }
 
 .centered-page h1 {
@@ -378,14 +374,14 @@ nav ul li a:hover {
   font-size: 1.5rem;
 }
 
-.form-container {
-    background-color: white;
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
+.form-container, .project-card {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
 }
 
 .form-title {

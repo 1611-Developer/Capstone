@@ -1,9 +1,23 @@
+
 <div class="project-card">
-  <h3><%= project.name %></h3>
-  <p><%= project.description %></p>
-  <small>
-    Created: <%= project.created_at.strftime('%b %d, %Y %H:%M') %>
-    <%# Optionally, add edit/delete links if you want %>
-  </small>
+  <div class="input-group">                                                                                           <label for="Project Name" class="label">Project Name:</label>
+    <h3><%= project.name %></h3>
+  </div>
+  <hr>
+  <br>
+  <div class="input-group">                                                                                           <label for="Project Description" class="label">Project Description:</label>
+    <p><%= project.description %></p>
+  </div
+  >
+  <hr>
+  <br>
+    <small>
+      Created: <%= project.created_at.strftime('%b %d, %Y %I:%M %p') %>
+    </small>
+
+    <br>
+    <%= link_to "Edit", edit_project_path(project), class: "project-action-link" %>
+    |
+    <%= link_to "Delete", project_path(project), method: :delete, data: { confirm: "Are you sure?" }, class: "project-action-link" %>
 </div>
 
