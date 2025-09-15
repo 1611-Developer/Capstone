@@ -17,7 +17,7 @@ class ProjectsController < ApplicationController
   def create
     @project = current_user.projects.build(project_params)
     if @project.save
-      redirect_to projects_path, notice: "Project created!"
+      redirect_to dashboard_path, notice: "Project created!"
     else
       @projects = current_user.projects.order(created_at: :desc)
       render :index, status: :unprocessable_entity

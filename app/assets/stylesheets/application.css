@@ -58,7 +58,7 @@ body {
   min-height: 100vh;
   text-align: center;
   background-color: #6CB4EE; /* Matches your existing background */
-  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
 /* Form container styling */
@@ -95,7 +95,7 @@ body {
 
 /* Input fields styling */
 .email-input,
-.password-input {
+.password-input, .project-name-input, .project-description-input {
   width: 100%; /* Make inputs take up the maximum width of their container */
   padding: 12px; /* Add padding for better spacing inside the input */
   font-size: 16px; /* Font size for readability */

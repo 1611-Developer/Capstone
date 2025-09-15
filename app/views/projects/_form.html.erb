@@ -1,10 +1,12 @@
-<%= form_with(model: project, local: true) do |form| %>
-  <div>
-    <%= form.text_field :name, placeholder: "Project name" %>
+<%= form_with(model: project, local: true, html: { class: "form-container" }) do |form| %>
+    <div class="input-group">
+      <label for="email_address" class="label">Project Name:</label>
+      <%= form.text_field :name, class: "project-name-input" %>
+    </div>
+  <div class="input-group">
+    <label for="Project description" class="label">Project Description:</label>
+    <%= form.text_area :description, class: "project-description-input" %>
   </div>
-  <div>
-    <%= form.text_area :description, placeholder: "Project description" %>
-  </div>
-  <%= form.submit "Create Project" %>
+    <%= form.submit "Create Project", class: "login-signup-btn signup-btn-color signup-btn-bottom" %>
 <% end %>
 
