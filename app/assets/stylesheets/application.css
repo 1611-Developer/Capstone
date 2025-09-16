@@ -98,6 +98,7 @@ background-color: white;
   border: 1px solid #ccc; /* Light gray border */
   border-radius: 6px; /* Rounded corners */
   box-sizing: border-box; /* Include padding and border in the element's total width */
+  text-align: center;
 }
 
 /* Button styling */
@@ -465,17 +466,24 @@ nav ul li a:hover {
 }
 
 .login-signup-btn.signup-btn-bottom {
-width: 100% !important;
-  max-width: none;
-  display: block !important;
-  margin: 1.5rem 0 !important;
+  width: 100% !important;
+  max-width: auto;
+  display: inline-block !important;
+  margin: 0.3rem 0 !important;
   padding: 1rem 0 !important;
+  font-size: 1.2rem;
+}
+
+.register-landing-btn {
+  width: 300px !important;
+  padding: 1rem 1rem !important;
   font-size: 1.5rem;
+  margin: 0.3rem 0 !important;
 }
 
 /* Change button look for hover, optional: */
-.login-signup-btn.signup-btn-bottom:hover,
-.login-signup-btn.signup-btn-bottom:focus {
+.login-signup-btn.signup-btn-bottom:hover, .register-landing-btn:hover,
+.login-signup-btn.signup-btn-bottom:focus .register-landing-btn:focus{
   background-color: white !important; /* Darker green, match your :hover design */
   color: #6CB4EE !important;
 }
