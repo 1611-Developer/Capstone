@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "profiles/show"
   # Signup routes
   get  "/signup", to: "signup#new"
   post "/signup", to: "signup#create"
