@@ -25,6 +25,8 @@ Rails.application.routes.draw do
     end
   end
 
+  get "/profile/:username", to: "profiles#show", as: :profile
+
   # Passwords resource
   resources :passwords, param: :token
 end
