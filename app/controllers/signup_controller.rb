@@ -28,6 +28,6 @@ class SignupController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email_address, :password, :password_confirmation, :first_name, :last_name, :username, :avatar)
+    params.require(:user).permit(:email_address, :password, :password_confirmation, :first_name, :last_name, :username)
   end
 
