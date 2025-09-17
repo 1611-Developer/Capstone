@@ -1,2 +1,16 @@
-<h1>Profiles#show</h1>
-<p>Find me in app/views/profiles/show.html.erb</p>
+<div class="centered-page">
+  <div class="profile-header">
+    <h2>
+      <%= @user.first_name %> | <span>@<%= @user.username %></span>
+    </h2>
+  </div>
+
+  <% if @projects.any? %>
+    <% @projects.each do |project| %>
+      <%= render partial: "projects/project_card", locals: { project: project } %>
+    <% end %>
+  <% else %>
+    <p>This user has no projects yet.</p>
+  <% end %>
+</div>
+

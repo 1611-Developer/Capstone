@@ -10,6 +10,9 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :username, presence: true, uniqueness: true
 
+  has_one_attached :avatar
+
+
   def self.authenticate_by(params)
     user = find_by(email_address: params[:email_address])
     user if user&.authenticate(params[:password])

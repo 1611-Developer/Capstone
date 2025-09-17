@@ -43,10 +43,6 @@
       <%= form.password_field :password_confirmation, required: true, autocomplete: "new-password", placeholder: "Repeat your password", maxlength: 72, class: "password-input" %>
     </div>
     <div class="input-group">
-      <label for="avatar" class="label">Avatar (optional):</label>
-      <%= form.file_field :avatar, class: "email-input" %>
-    </div>
-    <div class="input-group">
       <%= form.submit "Signup", class: "login-signup-btn signup-btn-color signup-btn-bottom" %>
     </div>
     <%= link_to "Already have an account? Login", login_path, class: "forgot-password-link" %>
