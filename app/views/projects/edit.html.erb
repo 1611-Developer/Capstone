@@ -9,6 +9,14 @@
       <label for="Project description" class="label">Project Description:</label>
       <%= form.text_area :description, class: "project-description-input" %>
     </div>
+    <div class="input-group">
+      <label for="Repository Link" class="label">Repository Link:</label>
+      <%= form.text_field :repository_link, class: "project-description-input" %>
+    </div>
+    <div class="input-group">
+      <label for="Video Link" class="label">Video Link:</label>
+      <%= form.text_field :video_link, class: "project-description-input" %>
+    </div>
     <%= form.submit "Save Changes", class: "login-signup-btn signup-btn-color signup-btn-bottom" %>
     <%= link_to "Cancel", dashboard_path, class: "login-signup-btn cancel-btn-color signup-btn-bottom" %>
   <% end %>

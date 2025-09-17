@@ -9,8 +9,54 @@
   <div class="input-group">
     <label for="Project Description" class="label">Project Description:</label>
     <p><%= project.description %></p>
-  </div
-  >
+  </div>
+  <div class="input-group">
+    <label for="Repository Link" class="label">Repository Link:</label>
+    <p><%= link_to project.repository_link, project.repository_link, target: "_blank", rel: "noopener" %></p>
+  </div>
+  <div class="input-group">
+
+
+
+
+<label for="Video Link" class="label">Video:</label>
+<div style="display: flex; justify-content: center; align-items: center; margin: 20px 0;">
+  <% if project.video_link.present? %>
+    <% if project.video_link.include?("youtube.com") %>
+      <% video_id = project.video_link.match(/(?:\?v=|\/embed\/|\/v\/|youtu\.be\/|\/watch\?v=)([^&\/\s]+)/)&.[](1) %>
+      <% if video_id.present? %>
+        <%= content_tag :iframe, nil, 
+            src: "https://www.youtube.com/embed/#{video_id}", 
+            width: 560, 
+            height: 315, 
+            frameborder: 0, 
+            allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", 
+            allowfullscreen: true 
+        %>
+      <% else %>
+        <p>Invalid YouTube link</p>
+      <% end %>
+    <% elsif project.video_link.include?("vimeo.com") %>
+      <% video_id = project.video_link.split('/').last %>
+      <%= content_tag :iframe, nil, 
+          src: "https://player.vimeo.com/video/#{video_id}", 
+          width: 640, 
+          height: 360, 
+          frameborder: 0, 
+          allow: "autoplay; fullscreen; picture-in-picture", 
+          allowfullscreen: true 
+      %>
+    <% else %>
+      <p>Invalid video link</p>
+    <% end %>
+  <% else %>
+    <p>No video link available</p>
+  <% end %>
+</div>
+
+
+
+  </div>
   <hr>
   <br>
     <small>
