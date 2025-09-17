@@ -1,8 +1,5 @@
 <div class="centered-page">
   <h2>Dashboard</h2>
-  <div class= "form-container" >
-    <%= link_to "Create Project", new_project_path, class: "login-signup-btn signup-btn-color signup-btn-bottom" %>
-  </div>
   <%# <%= render "projects/form", project: @project %>
     <% @projects.each do |project| %>
       <%= render "projects/project_card", project: project %>
