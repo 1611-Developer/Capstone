@@ -1,18 +1,18 @@
 <%= form_with(model: project, local: true, html: { class: "form-container" }) do |form| %>
   <div class="input-group">
     <label for="project name" class="label">Project Name:</label>
-    <%= form.text_field :name, class: "project-name-input" %>
+    <%= form.text_field :name, required: true, class: "project-name-input" %>
   </div>
   <div class="input-group">
     <label for="Project Description" class="label">Project Description:</label>
-    <%= form.text_area :description, class: "project-description-input" %>
+    <%= form.text_area :description, required: true, class: "project-description-input" %>
   </div>
   <div class="input-group">
     <label for="Repository Link" class="label">Repository Link:</label>
-    <%= form.text_field :repository_link, class: "project-description-input" %>
+    <%= form.text_field :repository_link, required: true, class: "project-description-input" %>
   </div>
   <div class="input-group">
-    <label for="Video Link" class="label">Project Description:</label>
+    <label for="Video Link" class="label">Video Link:</label>
     <%= form.text_field :video_link, class: "project-description-input" %>
   </div>
     <%= form.submit "Create Project", class: "login-signup-btn signup-btn-color signup-btn-bottom" %>
