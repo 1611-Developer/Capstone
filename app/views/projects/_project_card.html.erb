@@ -1,5 +1,9 @@
 
 <div class="project-card">
+
+<%= link_to "Share", project_url(project), target: "_blank", rel: "noopener", class: "share-link" %>
+
+
   <div class="input-group">
     <label for="Project Name" class="label">Project Name:</label>
     <h3><%= project.name %></h3>
@@ -64,9 +68,10 @@
     </small>
 
     <br>
-    <%= link_to "Edit", edit_project_path(project), class: "project-action-link" %>
-    |
-<%= link_to "Delete", confirm_delete_project_path(project), method: :delete, data: { confirm: "Are you sure?" } %>
+    <% if local_assigns[:show_actions] %>
+  <%= link_to "Edit", edit_project_path(project), class: "project-action-link" %> |
+  <%= link_to "Delete", confirm_delete_project_path(project), class: "project-action-link" %>
+<% end %>
 
 </div>
 

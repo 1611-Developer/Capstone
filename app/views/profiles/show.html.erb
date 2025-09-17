@@ -7,7 +7,8 @@
 
   <% if @projects.any? %>
     <% @projects.each do |project| %>
-      <%= render partial: "projects/project_card", locals: { project: project } %>
+      <%#= render partial: "projects/project_card", locals: { project: project } %>
+      <%= render partial: "projects/project_card", locals: { project: project, show_actions: false } %>
     <% end %>
   <% else %>
     <p>This user has no projects yet.</p>

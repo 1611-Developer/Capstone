@@ -3,5 +3,6 @@
   <%# <%= render "projects/form", project: @project %>
     <% @projects.each do |project| %>
       <%= render "projects/project_card", project: project %>
+      <%= render partial: "projects/project_card", locals: { project: project, show_actions: true } %>
     <% end %>
 </div>

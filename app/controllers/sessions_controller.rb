@@ -4,6 +4,10 @@ class SessionsController < ApplicationController
 
   def new
   end
+  
+  def start_new_session_for(user)
+    session[:user_id] = user.id
+  end
 
   def create
     user = User.find_by(email_address: params[:email_address])
@@ -21,7 +25,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    terminate_session
+    reset_session
     redirect_to root_path
   end
 end
